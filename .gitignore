@@ -8,3 +8,11 @@ TestFile.csv
 TestFile_transposed.csv
 
 *.pdf
+
+__pycache__/
+
+build/
+
+*.spec
+
+*.exe

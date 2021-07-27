@@ -7,6 +7,10 @@ This is a simple python script to transpose a .csv file; that is, turn the rows 
 - **Python 3.6+**:  This is required as the script relies on f-strings, which were introduced in Python 3.6.
 - **csv**, **argparse**, and **pathlib** libraries:     These are used to import and export the .csv files, and are (as far as I'm aware) included as standard with most Python installations.
 
+## How to Run
+
+The preferred method to run the script is to use python to run `Transpose_CSV.py` from the command line. Alternatively, there is an .exe file included in the [latest release](https://github.com/NathanielJS1541/Transpose_CSV/releases/latest). This can be run from the command line without using python: `Transpose_CSV.exe`.
+
 ## Help Output
 
 ```helpfile
@@ -28,6 +32,6 @@ optional arguments:
 
 ## Example Usage
 
-- The most basic usage would be to offer a single input using `python .\Transpose_CSV.py -i .\INPUT_FILE.csv`. This would save the output to `.\INPUT_FILE_transposed.csv`.
+- The most basic usage would be to offer a single input using `python .\Transpose_CSV.py -i .\INPUT_FILE.csv`. This would save the output to `.\INPUT_FILE_transposed.csv`. If you are running the .exe file that would look like: `Transpose_CSV.exe -i .\INPUT_FILE.csv`
 - You can also specify where the output should be sent to using `-o`: `python .\Transpose_CSV.py -i .\INPUT_FILE.csv -o C:\Users\John\MyNewFile.{input_ext}` would save the file to the specified path and name, but keep whatever extension it found on the input. The most useful flags are `{input_path} and {input_filename}`, since the script is designed for .csv files.
 - You can place flags between specified parts of the filename like so: `python .\Transpose_CSV.py -i .\INPUT_FILE.csv -o {input_path}\My_New_{input_filename}.csv`

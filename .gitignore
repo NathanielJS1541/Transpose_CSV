@@ -1,0 +1,10 @@
+
+.idea/
+
+venv/
+
+TestFile.csv
+
+TestFile_transposed.csv
+
+*.pdf

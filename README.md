@@ -5,7 +5,7 @@ This is a simple python script to transpose a .csv file; that is, turn the rows 
 ## Requirements
 
 - **Python 3.6+**:  This is required as the script relies on f-strings, which were introduced in Python 3.6.
-- **csv**, **argparse**, and **pathlib** libraries:     These are used to import and export the .csv files, and are (as far as I'm aware) included as standard with most Python installations.
+- **csv**, **argparse**, and **os** libraries:     These are used to import and export the .csv files, and are (as far as I'm aware) included as standard with most Python installations.
 
 ## How to Run
 
@@ -14,7 +14,7 @@ The preferred method to run the script is to use python to run `Transpose_CSV.py
 ## Help Output
 
 ```helpfile
-usage: Transpose_CSV.py [-h] -i INPUT_FILE [-o OUTPUT_FILE] [-f] [-v]
+usage: Transpose_CSV.py [-h] -i INPUT_FILE [-o OUTPUT_FILE] [-f] [-c] [-v]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -23,10 +23,14 @@ optional arguments:
   -o OUTPUT_FILE, --output-file OUTPUT_FILE
                         Output file name or path, in 'new Style' Python String Formatting.
                         Possible flags are: {input_path}, {input_filename}, {input_ext}
-                        Default: {input_path}\{input_filename}_transposed.{input_ext}
+                        Default: {input_path}\{input_filename}_Transposed.{input_ext}
   -f, --force-overwrite
                         If there already exists a file with the desired output path and
-                        file name, overwrite it. WARNING: May cause data loss
+                        file name, overwrite it.WARNING: May cause data loss
+  -c, --create-dir      If the complete path to the specified output file doesn't exist already,
+                        create the folders specified recursively to create a valid path.
+                        If the parent of the specified output folder does exist,
+                        -c is not necessary and the final folder will be created anyway.
   -v, --verbose         Adds more verbosity to outputs for debugging.
 ```
 

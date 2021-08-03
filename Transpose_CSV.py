@@ -80,7 +80,7 @@ parser.add_argument("-o", "--output-file", help="Output file name or path, in 'n
                                                 "{input_path}, {input_filename}, {input_ext}\n"
                                                 f"{OutputColours.BLUE}Default: {DEFAULT_TEMPLATE}{OutputColours.END}")
 parser.add_argument("-f", "--force-overwrite", help="If there already exists a file with the desired output path and \n"
-                                                    f"file name, overwrite it.{OutputColours.BOLD}"
+                                                    f"file name, overwrite it. {OutputColours.BOLD}"
                                                     f"{OutputColours.WARNING}WARNING: May cause data loss"
                                                     f"{OutputColours.END}", action="store_true")
 parser.add_argument("-c", "--create-dir", help="If the complete path to the specified output file doesn't exist already"

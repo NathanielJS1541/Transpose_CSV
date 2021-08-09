@@ -120,6 +120,6 @@ else:
         print(f"{OutputColours.WARNING}[WARN] The existing file {output_file} will be overwritten."
               f"{OutputColours.END}")
     # Save the file to the output
-    writer(open(output_file, 'w', newline='')).writerows(inputCSV)
+    writer(open(output_file, 'w', newline=''), quoting=csv.QUOTE_ALL).writerows(inputCSV)
     # Display some output to indicate success
     print(f"{OutputColours.INFO}[INFO] Output saved to: {output_file}{OutputColours.END}")
